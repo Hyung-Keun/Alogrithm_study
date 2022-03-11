@@ -17,7 +17,7 @@ def threeSum(nums):
     length = len(nums) #6
     for i in range(length - 2):
         if nums[i] > 0 or (i > 0 and nums[i] == nums[i - 1]):
-            continue
+            continue #이거 생각해냈다. 이 케이스같은 경우 [(-1, -1, 2), (-1, 0, 1), (-1, 0, 1)] 이렇게 중복된 답 두개 나오기때문에 붙어서 중복되는거 건너뛴다고 하는거였다.
         left, right = i + 1, length - 1
         while  left < right:
             sum = nums[i] + nums[left] + nums[right]
@@ -28,7 +28,7 @@ def threeSum(nums):
                 right -= 1
             else:
                 result.append((nums[i], nums[left], nums[right]))
-                print(result)
+                # print(result)
 
                 while left < right and nums[left] == nums[left + 1]: #while문 살짝 if문이랑 for문 합친느낌
                     left += 1
