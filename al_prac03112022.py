@@ -55,6 +55,7 @@ def is_number_exist(num, arr):
 # 각각의 알파벳에 대해서, 단어에 포함되어 있는 경우에는 처음 등장하는 위치를,
 # 포함되어 있지 않은 경우에는 -1을 출력하는 프로그램을 작성하시오.
 # 배열로 처리하는게 중요!
+#example: baekjoon
 #답안
 #O(N^2)
 def get_idx_naive(word):
