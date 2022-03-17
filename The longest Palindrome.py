@@ -23,7 +23,8 @@ eevee -> 5
 def longest_Palindrom(ssiba):
     for num in range(len(ssiba),0,-1):
         for num2 in range(len(ssiba)-num+1):
-            if ssiba[num2:num2+num] == ssiba[num2:num2+num][::-1]:
-                return num
+            if ssiba[num2:num2+num] == ssiba[num2:num2+num][::-1]: #슬라이싱 첫번째: 시작, 두번째: 끝, 마지막: 띄우는느낌 오프셋 / 문자열쓸때
+                return num                                          #기존에 있는거 할때 쓰는거!
 
 # print(longest_Palindrom("씨알고리고알씨"))
+

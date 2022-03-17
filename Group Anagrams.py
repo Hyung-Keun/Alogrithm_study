@@ -17,16 +17,16 @@ ex)
 #정렬: ['ate', 'bat', 'eat', 'nat', 'tan', 'tea'] sorted 사용시 print(sorted(example))
 #합치고: atebateatnattantea join 사용시 print(''.join(sorted(example)))
 #정답
-#해쉬매핑 위주로 생각할것 이런문제들은
+#해쉬맵 위주로 생각할것 이런문제들은
 import collections
 
 strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
 def group_anagram(strs):
     anagrams = collections.defaultdict(list)
+
     for word in strs:
-
-        anagrams[''.join(sorted(word))].append(word)
-
+        anagrams['_'.join(sorted(word))].append(word)
+        print(anagrams)
     return list(anagrams.values())
 print(group_anagram(strs))
 
